@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -11,63 +12,89 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #2b2e4a;
-    color: #fff;
+    background: #2e3440;
+    color: #eceff4;
 }
 
-.presentation {
-    position: relative;
-    width: 80%;
-    max-width: 800px;
-    height: 60vh;
-    overflow: hidden;
-    background: #1b1e33;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-}
-
-.slide {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    text-align: center;
+/* Container principal */
+.main-container {
+    width: 90%;
+    max-width: 700px;
     padding: 20px;
-    transition: opacity 0.5s ease;
+    text-align: center;
+    background: #3b4252;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 1s ease-in-out;
 }
 
-.slide.active {
-    display: flex;
-    opacity: 1;
-    animation: fadeIn 0.5s ease;
-}
-
+/* Animação de entrada */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.navigation {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
+/* Estilo de cabeçalho */
+header h1 {
+    font-size: 2em;
+    color: #88c0d0;
 }
 
-.navigation button {
-    background: none;
-    border: 2px solid #fff;
-    border-radius: 50%;
+header h1 span {
+    color: #a3be8c;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #d8dee9;
+    margin-top: 10px;
+}
+
+/* Estilo das seções */
+section {
+    margin-top: 30px;
+}
+
+section h2 {
+    font-size: 1.8em;
+    color: #bf616a;
+    margin-bottom: 10px;
+}
+
+/* Estilo da seção "Sobre Mim" */
+.about p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #d8dee9;
+}
+
+/* Estilo da seção "Habilidades" */
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li {
+    background: #4c566a;
     padding: 10px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 1.5em;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: #eceff4;
+}
+
+/* Botão de contato */
+.contact-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #88c0d0;
+    color: #2e3440;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 5px;
     transition: background 0.3s ease;
 }
 
-.navigation button:hover {
-    background: rgba(255, 255, 255, 0.3);
+.contact-button:hover {
+    background: #81a1c1;
 }
